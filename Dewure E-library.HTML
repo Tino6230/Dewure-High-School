@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEWURE DOCUMENTS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Georgia', serif;
+        }
+        .department-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .department-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .document-link {
+            transition: all 0.2s ease;
+        }
+        .document-link:hover {
+            background: rgba(59, 130, 246, 0.1);
+            padding-left: 1rem;
+        }
+        .pdf-viewer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+        }
+        .pdf-content {
+            width: 90%;
+            height: 90%;
+            margin: 2.5% auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header Navigation -->
+    <nav class="bg-white shadow-lg border-b-4 border-blue-600">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex space-x-8">
+                    <a href="Dewure High School Official.html" class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium transition-colors">HOME</a>
+                    <a href="NEWS.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">NEWS</a>
+                    <a href="Resources.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">RESOURCES</a>
+                    <a href="CONTACT US.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="text-center py-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <h1 class="text-4xl font-bold italic mb-4">DEWURE E-LIBRARY </h1>
+        <p class="text-xl opacity-90">Text Documents for studies including notes, GreenBooks and additional PDFs for all students</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <!-- ZJC Level -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">ZJC LEVEL DOCUMENTS</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Science & Mathematics Department -->
+                <div class="department-card bg-white/80 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600 border-b-2 border-blue-200 pb-2">
+                        🔬 Science & Mathematics Department
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="#" onclick="openPDF('Combined Science Form 2-1.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-blue-600">📚 Combined Science Form 1 & 2</a>
+                        <a href="#" onclick="openPDF('Geo Form 1 - 2021.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-blue-600">🌍 Geography Form 1</a>
+                        <a href="#" onclick="openPDF('Geography Bk 2.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-blue-600">🌍 Geography Form 2</a>
+                        <a href="#" onclick="openPDF('Agriculture notes form 3 pdf-1-3.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-blue-600">🌾 Agriculture Form 1-2</a>
+                        <a href="#" onclick="openPDF('New-General-Mathematics-Book-4-1-2.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-blue-600">🔢 Mathematics Form 1-4</a>
+                        <a href="#" onclick="openPDF('BIOLOGY STUDY PACK ORDINARY LEVEL .pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-blue-600">🧬 Biology Study Pack</a>
+                        <a href="#" onclick="openPDF('maths_2_O_june_1999(0).pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-blue-600">🔢 Mathematics Form 2</a>
+                    </div>
+                </div>
+
+                <!-- Languages & History Department -->
+                <div class="department-card bg-white/80 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-green-600 border-b-2 border-green-200 pb-2">
+                        📖 Languages & History Department
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="#" onclick="openPDF('English_F3_textbook_2019.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-green-600">🇬🇧 English ZJC</a>
+                        <a href="#" onclick="openPDF('ZJC History notes.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-green-600">📜 History Notes ZJC</a>
+                        <a href="#" onclick="openPDF('tsumo.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-green-600">🇿🇼 Shona Tsumo</a>
+                        <a href="#" onclick="openPDF('SHONA 1706.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-green-600">🇿🇼 Shona Form 1</a>
+                        <a href="#" onclick="openPDF('SHONA STUDYPACK.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-green-600">🇿🇼 Shona Language Study Pack</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ordinary Level -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">ORDINARY LEVEL DOCUMENTS</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Science & Mathematics Department -->
+                <div class="department-card bg-white/80 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-600 border-b-2 border-purple-200 pb-2">
+                        🔬 Science & Mathematics Department
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="#" onclick="openPDF('mathematics GREEN BOOK-1.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">🔢 Mathematics Green Book 1</a>
+                        <a href="#" onclick="openPDF('Agriculture Form 1 - 4 Revision_to-1_decrypted.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">🌾 Agriculture Form 3-4</a>
+                        <a href="#" onclick="openPDF('combined science step ahead book 4-1-1.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">📚 Combined Science O'Level</a>
+                        <a href="#" onclick="openPDF(\"'O'_Level_Maths_Revision(1).pdf\")" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">🔢 Mathematics Revision Notes</a>
+                        <a href="#" onclick="openPDF('GEOGRAPHY 4, New trends.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">🌍 New Trends Geography 4</a>
+                        <a href="#" onclick="openPDF('Step Ahead Geo Bk 3.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">🌍 Geography Form 3</a>
+                        <a href="#" onclick="openPDF('FORM_3_PHYSICS-SCALARS_AND_VECTORS.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">⚡ Physics: Vectors and Scalars</a>
+                        <a href="#" onclick="openPDF('IGCSE O-LEVEL COMPUTER SCIENCE.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">💻 Computer Science Study Pack</a>
+                        <a href="#" onclick="openPDF('O Level Computer Studies Notes - ZIMSEC Syllabus.rtf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">💻 O'Level Computer Studies</a>
+                        <a href="#" onclick="openPDF('FORM_3_PHYSICS-KINEMATICS.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">⚡ Physics: Kinematics</a>
+                        <a href="#" onclick="openPDF('Biology Redspot-1.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">🧬 Biology Redspot</a>
+                        <a href="#" onclick="openPDF('Chemistry Greenbook 2010-2014.compressed.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">🧪 Chemistry Green Book</a>
+                        <a href="#" onclick="openPDF('Emerald Combined Science_compressed(1).pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-purple-600">📚 Combined Science Green Book</a>
+                    </div>
+                </div>
+
+                <!-- Languages & History Department -->
+                <div class="department-card bg-white/80 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-orange-600 border-b-2 border-orange-200 pb-2">
+                        📖 Languages & History Department
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="#" onclick="openPDF('ENGLISH LITERARY TERMS.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-orange-600">🇬🇧 English Literary Terms</a>
+                        <a href="#" onclick="openPDF('SHONA_GREEN_BOOK_(1).pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-orange-600">🇿🇼 Shona Green Book</a>
+                        <a href="#" onclick="openPDF(\"'O' LEVEL SHONA.pdf\")" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-orange-600">🇿🇼 O'Level Shona</a>
+                        <a href="#" onclick="openPDF('HISTORY O LEVEL NOTES 2ND EDITION-1.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-orange-600">📜 History Additional Notes</a>
+                        <a href="#" onclick="openPDF('History of Zimbabwe From the Stone Age to  Colonialism-signed.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-orange-600">📜 Stone Age to Iron Age</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Level -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">ADVANCED LEVEL DOCUMENTS</h2>
+            
+            <div class="flex justify-center">
+                <div class="department-card bg-white/80 rounded-xl p-6 shadow-lg max-w-2xl w-full">
+                    <h3 class="text-2xl font-semibold mb-4 text-red-600 border-b-2 border-red-200 pb-2 text-center">
+                        🎓 Advanced Level Studies
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="#" onclick="openPDF('A LEVEL NOTES HYDRO, GEOMO,DESERTS-1 - Copy (2).pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-red-600">🌍 Advanced Level Geography</a>
+                        <a href="#" onclick="openPDF('A LEVEL PURE MATHS STUDY PACK.pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-red-600">🔢 Pure Mathematics</a>
+                        <a href="#" onclick="openPDF('PURE MATHEMATICS DASHAN(GENDER 1) (2).pdf')" class="document-link block py-2 px-3 rounded-lg text-gray-700 hover:text-red-600">🔢 Pure Mathematics Level 2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Viewer Modal -->
+    <div id="pdfViewer" class="pdf-viewer">
+        <span class="close-btn" onclick="closePDF()">&times;</span>
+        <div class="pdf-content">
+            <iframe id="pdfFrame" src="" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-2">DEWURE HIGH SCHOOL</h3>
+            <p class="text-gray-300">Excellence in Education • Building Future Leaders</p>
+        </div>
+    </footer>
+
+    <script>
+        function openPDF(filename) {
+            const viewer = document.getElementById('pdfViewer');
+            const frame = document.getElementById('pdfFrame');
+            frame.src = filename;
+            viewer.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePDF() {
+            const viewer = document.getElementById('pdfViewer');
+            const frame = document.getElementById('pdfFrame');
+            viewer.style.display = 'none';
+            frame.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close PDF viewer when clicking outside the content
+        document.getElementById('pdfViewer').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePDF();
+            }
+        });
+
+        // Close PDF viewer with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePDF();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9673caad63354ed4',t:'MTc1Mzg2NzM0OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEWURE HIGH SCHOOL - Academic Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .resource-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+            transform: scale(1.05);
+        }
+        
+        .level-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        
+        .subject-icon {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">🏫</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">DEWURE HIGH SCHOOL</h1>
+                        <p class="text-sm text-gray-600">Academic Resources Center</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="Dewure High School Official.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">HOME</a>
+                    <a href="NEWS.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">NEWS</a>
+                    <a href="Dewure E-library.HTML" class="text-gray-700 hover:text-blue-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">E-LIBRARY</a>
+                    <a href="CONTACT US.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">CONTACT US</a>
+
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-blue-50 rounded">HOMEPAGE</a>
+                <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-blue-50 rounded">NEWS</a>
+                <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-blue-50 rounded">GALLERY</a>
+                <a href="#" class="block py-2 px-4 text-blue-600 font-semibold bg-blue-50 rounded">RESOURCES</a>
+                <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-blue-50 rounded">ACCOUNTS</a>
+                <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-blue-50 rounded">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">📚 Academic Resources Center</h2>
+                <p class="text-xl md:text-2xl mb-6 opacity-90">Comprehensive Study Materials for All Levels</p>
+                <p class="text-lg opacity-80 max-w-3xl mx-auto">
+                    Access our extensive collection of textbooks, study guides, past papers, and educational resources 
+                    designed to support your academic journey from ZJC to Advanced Level.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="fade-in">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                    <div class="text-gray-600 text-sm">Study Materials</div>
+                </div>
+                <div class="fade-in">
+                    <div class="text-3xl font-bold text-green-600 mb-2">15+</div>
+                    <div class="text-gray-600 text-sm">Subjects Covered</div>
+                </div>
+                <div class="fade-in">
+                    <div class="text-3xl font-bold text-purple-600 mb-2">3</div>
+                    <div class="text-gray-600 text-sm">Academic Levels</div>
+                </div>
+                <div class="fade-in">
+                    <div class="text-3xl font-bold text-orange-600 mb-2">24/7</div>
+                    <div class="text-gray-600 text-sm">Access Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        
+        <!-- ZJC Level Resources -->
+        <section class="mb-16 fade-in">
+            <div class="text-center mb-12">
+                <div class="level-badge text-white px-6 py-2 rounded-full inline-block mb-4">
+                    <span class="font-semibold">📖 ZJC LEVEL RESOURCES</span>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Zimbabwe Junior Certificate</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Essential study materials for Forms 1-2, covering core subjects including Sciences, Mathematics, Languages, and Social Studies.
+                </p>
+            </div>
+            
+            <!-- Science & Mathematics -->
+            <div class="mb-12">
+                <div class="flex items-center mb-6">
+                    <div class="subject-icon w-10 h-10 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-white font-bold">🔬</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800">Science, Geography & Mathematics</h4>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🧪</span>
+                            <h5 class="font-semibold text-gray-800">Combined Science Forms 1-2</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Comprehensive science textbook covering Biology, Chemistry, and Physics fundamentals.</p>
+                        <button onclick="downloadResource('Combined Science Form 2-1.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🌍</span>
+                            <h5 class="font-semibold text-gray-800">Geography Form 1</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Introduction to physical and human geography concepts and map reading skills.</p>
+                        <button onclick="downloadResource('Geo Form 1 - 2021.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🌍</span>
+                            <h5 class="font-semibold text-gray-800">Geography Form 2</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Advanced geographical concepts including climate, vegetation, and economic activities.</p>
+                        <button onclick="downloadResource('Geography Bk 2.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🌾</span>
+                            <h5 class="font-semibold text-gray-800">Agriculture Forms 1-2</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Practical agriculture covering crop production, animal husbandry, and farming techniques.</p>
+                        <button onclick="downloadResource('Agriculture notes form 3 pdf-1-3.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🔢</span>
+                            <h5 class="font-semibold text-gray-800">Mathematics Forms 1-4</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Complete mathematics textbook covering algebra, geometry, and statistics.</p>
+                        <button onclick="downloadResource('New-General-Mathematics-Book-4-1-2.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🧬</span>
+                            <h5 class="font-semibold text-gray-800">Biology Study Pack</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Comprehensive biology notes covering cell structure, genetics, and ecology.</p>
+                        <button onclick="downloadResource('BIOLOGY STUDY PACK ORDINARY LEVEL .pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Languages & History -->
+            <div class="mb-12">
+                <div class="flex items-center mb-6">
+                    <div class="subject-icon w-10 h-10 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-white font-bold">📝</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800">Languages & History</h4>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🇬🇧</span>
+                            <h5 class="font-semibold text-gray-800">English ZJC</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">English language and literature for Form 3 students with comprehensive exercises.</p>
+                        <button onclick="downloadResource('English_F3_textbook_2019.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🏛️</span>
+                            <h5 class="font-semibold text-gray-800">History Notes ZJC</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Zimbabwean and world history covering ancient civilizations to modern times.</p>
+                        <button onclick="downloadResource('ZJC History notes.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🇿🇼</span>
+                            <h5 class="font-semibold text-gray-800">Shona Tsumo</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Traditional Shona proverbs and their meanings for cultural understanding.</p>
+                        <button onclick="downloadResource('tsumo.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🇿🇼</span>
+                            <h5 class="font-semibold text-gray-800">Shona Form 1</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Introduction to Shona language grammar, vocabulary, and basic literature.</p>
+                        <button onclick="downloadResource('SHONA 1706.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🇿🇼</span>
+                            <h5 class="font-semibold text-gray-800">Shona Study Pack</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Comprehensive Shona language study materials with exercises and examples.</p>
+                        <button onclick="downloadResource('SHONA STUDYPACK.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ordinary Level Resources -->
+        <section class="mb-16 fade-in">
+            <div class="text-center mb-12">
+                <div class="level-badge text-white px-6 py-2 rounded-full inline-block mb-4" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);">
+                    <span class="font-semibold">🎓 ORDINARY LEVEL RESOURCES</span>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Cambridge/ZIMSEC Ordinary Level</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Advanced study materials for Forms 3-4, including past papers, revision guides, and comprehensive textbooks for all major subjects.
+                </p>
+            </div>
+            
+            <!-- Science & Mathematics O-Level -->
+            <div class="mb-12">
+                <div class="flex items-center mb-6">
+                    <div class="subject-icon w-10 h-10 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-white font-bold">⚗️</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800">Science, Mathematics & Geography</h4>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">📗</span>
+                            <h5 class="font-semibold text-gray-800">Mathematics Green Book</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Official ZIMSEC mathematics revision guide with past paper questions and solutions.</p>
+                        <button onclick="downloadResource('mathematics GREEN BOOK-1.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🌾</span>
+                            <h5 class="font-semibold text-gray-800">Agriculture Forms 3-4</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Advanced agricultural science covering modern farming techniques and agribusiness.</p>
+                        <button onclick="downloadResource('Agriculture Form 1 - 4 Revision_to-1_decrypted.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🧪</span>
+                            <h5 class="font-semibold text-gray-800">Combined Science O-Level</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Step Ahead Book 4 covering advanced topics in Biology, Chemistry, and Physics.</p>
+                        <button onclick="downloadResource('combined science step ahead book 4-1-1.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🔢</span>
+                            <h5 class="font-semibold text-gray-800">Mathematics Revision Notes</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Comprehensive O-Level mathematics revision with worked examples and practice questions.</p>
+                        <button onclick="downloadResource(''O'_Level_Maths_Revision(1).pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🌍</span>
+                            <h5 class="font-semibold text-gray-800">New Trends Geography 4</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Modern geography textbook covering contemporary global issues and case studies.</p>
+                        <button onclick="downloadResource('GEOGRAPHY 4, New trends.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">💻</span>
+                            <h5 class="font-semibold text-gray-800">Computer Science Study Pack</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">IGCSE Computer Science covering programming, algorithms, and data representation.</p>
+                        <button onclick="downloadResource('IGCSE O-LEVEL COMPUTER SCIENCE.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Languages & History O-Level -->
+            <div class="mb-12">
+                <div class="flex items-center mb-6">
+                    <div class="subject-icon w-10 h-10 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-white font-bold">📚</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800">Languages & History</h4>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">📖</span>
+                            <h5 class="font-semibold text-gray-800">English Literary Terms</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Essential literary terms and devices for English literature analysis and criticism.</p>
+                        <button onclick="downloadResource('ENGLISH LITERARY TERMS.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">📗</span>
+                            <h5 class="font-semibold text-gray-800">Shona Green Book</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Official ZIMSEC Shona revision guide with past papers and model answers.</p>
+                        <button onclick="downloadResource('SHONA_GREEN_BOOK_(1).pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🇿🇼</span>
+                            <h5 class="font-semibold text-gray-800">O-Level Shona</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Advanced Shona language and literature for Ordinary Level students.</p>
+                        <button onclick="downloadResource(''O' LEVEL SHONA.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="resource-card rounded-xl p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-3">🏛️</span>
+                            <h5 class="font-semibold text-gray-808">History Additional Notes</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Supplementary O-Level history notes covering African and world history topics.</p>
+                        <button onclick="downloadResource('HISTORY O LEVEL NOTES 2ND EDITION-1.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                            📥 Download PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Level Resources -->
+        <section class="mb-16 fade-in">
+            <div class="text-center mb-12">
+                <div class="level-badge text-white px-6 py-2 rounded-full inline-block mb-4" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);">
+                    <span class="font-semibold">🎯 ADVANCED LEVEL RESOURCES</span>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Cambridge/ZIMSEC Advanced Level</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Specialized study materials for Forms 5-6, preparing students for university entrance and advanced subject mastery.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="resource-card rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">🌍</span>
+                        <h5 class="font-semibold text-gray-800">Advanced Geography</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Hydrology, geomorphology, and desert studies for A-Level geography students.</p>
+                    <button onclick="downloadResource('A LEVEL NOTES HYDRO, GEOMO,DESERTS-1 - Copy (2).pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                        📥 Download PDF
+                    </button>
+                </div>
+                
+                <div class="resource-card rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">📐</span>
+                        <h5 class="font-semibold text-gray-800">Pure Mathematics</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Comprehensive A-Level pure mathematics covering calculus, algebra, and mechanics.</p>
+                    <button onclick="downloadResource('A LEVEL PURE MATHS STUDY PACK.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                        📥 Download PDF
+                    </button>
+                </div>
+                
+                <div class="resource-card rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">📐</span>
+                        <h5 class="font-semibold text-gray-800">Pure Mathematics Level 2</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Advanced pure mathematics topics including differential equations and complex numbers.</p>
+                    <button onclick="downloadResource('PURE MATHEMATICS DASHAN(GENDER 1) (2).pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                        📥 Download PDF
+                    </button>
+                </div>
+                
+                <div class="resource-card rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">⚛️</span>
+                        <h5 class="font-semibold text-gray-800">Lower Sixth Physics</h5>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Advanced physics concepts including quantum mechanics and electromagnetic theory.</p>
+                    <button onclick="downloadResource('L6 physics notes.pdf')" class="download-btn text-white px-4 py-2 rounded-lg text-sm font-medium w-full">
+                        📥 Download PDF
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study Tips Section -->
+        <section class="bg-white rounded-2xl p-8 shadow-lg mb-16">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">📝 Study Tips & Guidelines</h3>
+                <p class="text-gray-600">Maximize your learning with these proven study strategies</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⏰</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Time Management</h4>
+                    <p class="text-sm text-gray-600">Create a study schedule and stick to it consistently</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📝</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Active Learning</h4>
+                    <p class="text-sm text-gray-600">Take notes, ask questions, and practice regularly</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">👥</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Group Study</h4>
+                    <p class="text-sm text-gray-600">Collaborate with classmates for better understanding</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Practice Tests</h4>
+                    <p class="text-sm text-gray-600">Use past papers to prepare for examinations</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">🏫</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">DEWURE HIGH SCHOOL</h4>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">Empowering students with quality educational resources since 1999</p>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Academic Levels</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>ZJC Level (Forms 1-2)</li>
+                        <li>Ordinary Level (Forms 3-4)</li>
+                        <li>Advanced Level (Forms 5-6)</li>
+                        <li>Remedial Classes</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Resources</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Digital Textbooks</li>
+                        <li>Past Examination Papers</li>
+                        <li>Study Guides</li>
+                        <li>Revision Notes</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Support</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📧 resources@dewurehigh.edu</li>
+                        <li>📞 +263 4 123 4567</li>
+                        <li>🕒 Mon-Fri: 8AM-6PM</li>
+                        <li>📍 Gutu, Zimbabwe</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Dewure High School. All educational resources are provided for academic purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="bg-white rounded-xl p-8 max-w-md mx-4">
+            <div class="text-center">
+                <div class="text-6xl mb-4">📥</div>
+                <h3 class="text-xl font-bold mb-4">Download Resource</h3>
+                <p class="text-gray-600 mb-6" id="downloadMessage">This resource would be downloaded in a real implementation. The file contains comprehensive study materials for your academic success.</p>
+                <div class="space-y-3">
+                    <button onclick="closeDownloadModal()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full">
+                        Continue to Download
+                    </button>
+                    <button onclick="closeDownloadModal()" class="text-gray-500 hover:text-gray-700 transition-colors">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function downloadResource(filename) {
+            document.getElementById('downloadMessage').textContent = `You are about to download "${filename}". This comprehensive study material will help enhance your understanding of the subject. Make sure you have a PDF reader installed on your device.`;
+            document.getElementById('downloadModal').classList.remove('hidden');
+        }
+
+        function closeDownloadModal() {
+            document.getElementById('downloadModal').classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('downloadModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeDownloadModal();
+            }
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9673d861c10473b0',t:'MTc1Mzg2NzkwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
